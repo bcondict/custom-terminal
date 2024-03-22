@@ -23,6 +23,59 @@ return {
 			inlay_hints = { enabled = false },
 			---@type lspconfig.options
 			servers = {
+				csharp_ls = {
+					settings = {
+						omnisharp = {
+							formattingOptions = {
+								enableEditorConfigSupport = true,
+							},
+						},
+					},
+				},
+				--als = {},
+				--awkls = {},
+				--bashls = {},
+				--clangd = {},
+				--eslint = {},
+				--dartls = {},
+				--denols = {},
+				--grammarly = {},
+				--elixirls = {},
+				--elmls = {},
+				--flow = {},
+				--fsautocomplete = {},
+				--hie = {},
+				--hhvm = {},
+				--haxe_language_server = {},
+				--intelephense = {},
+				--java_language_server = {},
+				--jdtls = {},
+				--jsonls = {},
+				--omnisharp = {},
+				--kotlin_language_server = {},
+				--julials = {},
+				astro = {
+					settings = {
+						astro = {
+							format = {
+								enable = true,
+							},
+							trace = {
+								server = "verbose",
+							},
+						},
+						typescript = {},
+					},
+				},
+				c_language_server = {
+					settings = {
+						ccls = {
+							completion = {
+								filterAndSort = false,
+							},
+						},
+					},
+				},
 				cssls = {},
 				tailwindcss = {
 					root_dir = function(...)

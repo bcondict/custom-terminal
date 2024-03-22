@@ -6,13 +6,13 @@ return {
 		opts = {
 			ensure_installed = {
 				"astro",
-        "angular",
+				"angular",
 				"cmake",
-        "c",
+				"c",
 				"cpp",
-        "c_sharp",
-        "python",
-        "html",
+				"c_sharp",
+				"python",
+				"html",
 				"css",
 				"fish",
 				"gitignore",
@@ -20,15 +20,16 @@ return {
 				"graphql",
 				"http",
 				"java",
-        "javascript",
-        "json",
-        "typescript",
-        "tsx",
+				"javascript",
+				"json",
+				"typescript",
+				"tsx",
 				"php",
 				"rust",
 				"scss",
 				"sql",
 				"svelte",
+        "markdown"
 			},
 
 			-- matchup = {
@@ -65,12 +66,12 @@ return {
 			require("nvim-treesitter.configs").setup(opts)
 
 			-- MDX
-			vim.filetype.add({
-				extension = {
-					mdx = "mdx",
-				},
-			})
-			vim.treesitter.language.register("markdown", "mdx")
+			--vim.filetype.add({
+			--	extension = {
+			--		mdx = "mdx",
+			--	},
+			--})
+			--vim.treesitter.language.register("markdown", "mdx")
 		end,
 	},
 }
