@@ -12,6 +12,7 @@ return {
 				"tailwindcss-language-server",
 				"typescript-language-server",
 				"css-lsp",
+				"clangd",
 			})
 		end,
 	},
@@ -32,50 +33,7 @@ return {
 						},
 					},
 				},
-				--als = {},
-				--awkls = {},
-				--bashls = {},
-				--clangd = {},
-				--eslint = {},
-				--dartls = {},
-				--denols = {},
-				--grammarly = {},
-				--elixirls = {},
-				--elmls = {},
-				--flow = {},
-				--fsautocomplete = {},
-				--hie = {},
-				--hhvm = {},
-				--haxe_language_server = {},
-				--intelephense = {},
-				--java_language_server = {},
-				--jdtls = {},
-				--jsonls = {},
-				--omnisharp = {},
-				--kotlin_language_server = {},
-				--julials = {},
-				astro = {
-					settings = {
-						astro = {
-							format = {
-								enable = true,
-							},
-							trace = {
-								server = "verbose",
-							},
-						},
-						typescript = {},
-					},
-				},
-				c_language_server = {
-					settings = {
-						ccls = {
-							completion = {
-								filterAndSort = false,
-							},
-						},
-					},
-				},
+				astro = {},
 				cssls = {},
 				tailwindcss = {
 					root_dir = function(...)

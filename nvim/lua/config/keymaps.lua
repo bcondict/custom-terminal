@@ -32,6 +32,8 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
+-- remove tags built in keymaps
+
 -- Disable continuations
 keymap.set("n", "<Leader>o", "o<Esc>^Da", opts)
 keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
@@ -59,9 +61,9 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
+keymap.set("n", "<Leader>j", function()
 	vim.diagnostic.goto_next()
-end, opts)
+end, { noremap = false, remap = true })
 
 keymap.set("n", "<leader>r", function()
 	require("craftzdog.hsl").replaceHexWithHSL()
