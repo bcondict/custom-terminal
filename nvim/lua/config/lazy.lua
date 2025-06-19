@@ -1,3 +1,5 @@
+vim.g.lazyvim_check_order = false
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -20,8 +22,7 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-
-      opts = { colorscheme = "solarized-osaka", news = { lazyvim = true, neovim = true } },
+      opts = { colorscheme = "solarized-osaka", new = { lazyvim = true, neovim = true } },
     },
     -- import/override with your plugins
     { import = "plugins" },
@@ -29,6 +30,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
+    -- { import = "lazyvim.plugins.extras.lang.omnisharp" },
     -- { import = "lazyvim.plugins.extras.lang.copilot" },
   },
   defaults = {
@@ -46,7 +48,7 @@ require("lazy").setup({
     notify = false, -- notify on update
   }, -- automatically check for plugin updates
   performance = {
-    catche = {
+    cache = {
       enabled = true,
     },
     rtp = {

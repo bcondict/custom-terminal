@@ -8,17 +8,17 @@ return {
         "astro",
         "angular",
         "c",
-        "cpp",
+        "c_sharp",
         "python",
         "html",
         "css",
         "gitignore",
+        "http",
         "javascript",
         "json",
         "typescript",
         "tsx",
         "sql",
-        "markdown",
       },
 
       -- matchup = {
@@ -53,6 +53,14 @@ return {
     },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
+
+      -- MDX
+      vim.filetype.add({
+        extension = {
+          mdx = "mdx",
+        },
+      })
+      vim.treesitter.language.register("markdown", "mdx")
     end,
   },
 }
